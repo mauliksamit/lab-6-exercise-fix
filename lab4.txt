@@ -1,1 +1,12 @@
 Answer written questions here:
+
+Question 1:
+We start with a low number so that the exe app made stays responsive while zooming or moving. Because the program has to iterate for every pixel on the screen for each frame, the program can lag if teh iterations are too big.
+
+Question 2:
+
+Since iterations happen independently for pixels, parallelizing this can increase efficiency. This can be done by dividing the screen into grids or collections of pixels and assigning each grid to a CPU core, and this delegation to workers can be done by the main thread, which in turn will join the chunks together when ready, saving a lot of time.
+
+Question 3:
+
+Sampling at the center of 4 subpixels per pixel would smoothen the jagged effect and reduce speckled noise. However, it would negatively impact performance as this computation would be 4 times of what it is currently.
